@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "npx serve .",
+    "deploy:worker": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.113.0"
+  }
+}
