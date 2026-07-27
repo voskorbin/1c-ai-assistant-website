@@ -43,7 +43,7 @@ const SYSTEM_PROMPT = `You are an AI assistant for the 1C AI Assistant project. 
 If the question is NOT about 1C AI Assistant, 1C, LLM, MCP, or the gateway, reply: "I don't specialize in this. I focus on the 1C AI Assistant project." Reply concisely in the user's language. Do not use emojis. Reply with plain text only, no HTML/XML tags.`;
 
 const ALLOWED_ORIGINS = [
-  'https://naebros.github.io',
+  'https://voskorbin.github.io',
 ];
 
 if (ALLOWED_ORIGINS.length === 0) {
