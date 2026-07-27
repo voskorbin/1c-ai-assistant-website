@@ -3,8 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1C AI Assistant</title>
-  <meta name="description" content="AI Assistant for 1C:Enterprise — chat with an LLM directly from the 1C interface." />
+  <title>1C AI Assistant — ИИ-ассистент для 1С:Предприятия</title>
+  <meta name="description" content="Бесплатное open-source расширение 1С с чат-интерфейсом, LLM и MCP. Подключает 1С к OpenAI, Ollama и другим языковым моделям." />
+  <link rel="canonical" href="https://voskorbin.github.io/1c-ai-assistant-website" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate" hreflang="ru" href="https://voskorbin.github.io/1c-ai-assistant-website" />
+  <link rel="alternate" hreflang="en" href="https://voskorbin.github.io/1c-ai-assistant-website?lang=en" />
+
+  <meta property="og:title" content="1C AI Assistant — ИИ-ассистент для 1С:Предприятия" />
+  <meta property="og:description" content="Бесплатное open-source расширение 1С с чат-интерфейсом, LLM и MCP. Подключает 1С к OpenAI, Ollama и другим языковым моделям." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://voskorbin.github.io/1c-ai-assistant-website" />
+  <meta property="og:image" content="https://voskorbin.github.io/1c-ai-assistant-website/images/og-image.png" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="1C AI Assistant — ИИ-ассистент для 1С:Предприятия" />
+  <meta name="twitter:description" content="Бесплатное open-source расширение 1С с чат-интерфейсом, LLM и MCP." />
+  <meta name="twitter:image" content="https://voskorbin.github.io/1c-ai-assistant-website/images/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "1C AI Assistant",
+    "description": "ИИ-ассистент для 1С:Предприятия с чат-интерфейсом, LLM и MCP",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Windows, Linux",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "RUB"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "voskorbin"
+    },
+    "codeRepository": "https://github.com/voskorbin/1c-ai-assistant",
+    "license": "https://github.com/voskorbin/1c-ai-assistant/blob/main/LICENSE"
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,14 +90,74 @@
 
     <section id="features" class="section container">
       <h2 class="section-title" data-i18n="features_title">Возможности</h2>
-      <div class="grid" id="features-grid"></div>
+      <div class="grid" id="features-grid">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 22H10l-6 4V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2z"/><path d="M8 10h12M8 14h8"/></svg>
+          </div>
+          <h3>Чат с ИИ внутри 1С</h3>
+          <p>Общайтесь с языковой моделью, не покидая интерфейс конфигурации.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l6 6v16a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M17 3v6h6"/><path d="M8 12h12M8 16h12M8 20h8"/></svg>
+          </div>
+          <h3>Контекст объекта</h3>
+          <p>Задавайте вопросы по текущему справочнику, документу или отчёту.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="24" height="20" rx="2"/><circle cx="9" cy="11" r="2.5"/><path d="M2 20l7-5 5 4 4-3 8 6"/></svg>
+          </div>
+          <h3>Работа с изображениями</h3>
+          <p>Прикрепляйте скриншоты и документы для анализа.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="22" height="24" rx="2"/><path d="M3 9h22M3 17h22"/><circle cx="8" cy="5.5" r="1" fill="#fff"/><circle cx="8" cy="13.5" r="1" fill="#fff"/><circle cx="8" cy="21.5" r="1" fill="#fff"/></svg>
+          </div>
+          <h3>On-premise шлюз</h3>
+          <p>Данные не покидают вашу инфраструктуру.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l-3 3a4 4 0 0 1-5.7-5.7l3-3"/><path d="M16 9l3-3a4 4 0 0 1 5.7 5.7l-3 3"/><path d="M10 10l8 8"/></svg>
+          </div>
+          <h3>Поддержка MCP</h3>
+          <p>Интеграция с инструментами через Model Context Protocol.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="10"/><path d="M14 7v7l4 2.5"/></svg>
+          </div>
+          <h3>История чата</h3>
+          <p>Все ответы сохраняются для повторного просмотра.</p>
+        </div>
+      </div>
     </section>
 
     <hr class="divider" />
 
     <section id="installation" class="section container">
       <h2 class="section-title" data-i18n="install_title">Установка</h2>
-      <div class="steps" id="install-steps"></div>
+      <div class="steps" id="install-steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <span class="step-text">Импортируйте расширение CFE в конфигурацию 1С</span>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <span class="step-text">Разверните и запустите Go-шлюз на вашем сервере</span>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <span class="step-text">Укажите адрес шлюза в настройках 1С</span>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <span class="step-text">Откройте форму чата и начните диалог с ИИ</span>
+        </div>
+      </div>
     </section>
 
     <hr class="divider" />

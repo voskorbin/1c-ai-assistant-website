@@ -116,46 +116,69 @@ const el = {
 // -----------------------------------------------------------------
 function renderFeatures() {
   const grid = el.featuresGrid;
-  grid.innerHTML = '';
+  const existingCards = grid.querySelectorAll('.card');
 
   i18n[lang].features.forEach((feature, i) => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.style.animationDelay = `${i * 100}ms`;
+    let card = existingCards[i];
+    if (!card) {
+      card = document.createElement('div');
+      card.className = 'card';
+      card.style.animationDelay = `${i * 100}ms`;
+      grid.appendChild(card);
+    }
 
-    const iconWrap = document.createElement('div');
-    iconWrap.className = 'card-icon';
+    let iconWrap = card.querySelector('.card-icon');
+    if (!iconWrap) {
+      iconWrap = document.createElement('div');
+      iconWrap.className = 'card-icon';
+      card.appendChild(iconWrap);
+    }
     iconWrap.innerHTML = window.ICONS[feature.icon] || '';
 
-    const title = document.createElement('h3');
+    let title = card.querySelector('h3');
+    if (!title) {
+      title = document.createElement('h3');
+      card.appendChild(title);
+    }
     title.textContent = feature.title;
 
-    const desc = document.createElement('p');
+    let desc = card.querySelector('p');
+    if (!desc) {
+      desc = document.createElement('p');
+      card.appendChild(desc);
+    }
     desc.textContent = feature.desc;
-
-    card.append(iconWrap, title, desc);
-    grid.appendChild(card);
   });
 }
 
 function renderInstall() {
   const list = el.installSteps;
-  list.innerHTML = '';
-  i18n[lang].install.forEach((stepText, i) => {
-    const step = document.createElement('div');
-    step.className = 'step';
-    step.style.animationDelay = `${i * 100}ms`;
+  const existingSteps = list.querySelectorAll('.step');
 
-    const num = document.createElement('span');
-    num.className = 'step-num';
+  i18n[lang].install.forEach((stepText, i) => {
+    let step = existingSteps[i];
+    if (!step) {
+      step = document.createElement('div');
+      step.className = 'step';
+      step.style.animationDelay = `${i * 100}ms`;
+      list.appendChild(step);
+    }
+
+    let num = step.querySelector('.step-num');
+    if (!num) {
+      num = document.createElement('span');
+      num.className = 'step-num';
+      step.appendChild(num);
+    }
     num.textContent = String(i + 1);
 
-    const text = document.createElement('span');
-    text.className = 'step-text';
+    let text = step.querySelector('.step-text');
+    if (!text) {
+      text = document.createElement('span');
+      text.className = 'step-text';
+      step.appendChild(text);
+    }
     text.textContent = stepText;
-
-    step.append(num, text);
-    list.appendChild(step);
   });
 }
 
